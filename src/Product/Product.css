@@ -9,15 +9,22 @@
   max-height: 400px;
   min-width: 100px;
 
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   z-index: 1;
 }
 
 .product > img {
-  max-width: 200px;
+  max-width: 300px;
   width: 100%;
   object-fit: contain;
   margin-bottom: 15px;
+  cursor: pointer;
+  transition: transform, 450ms;
+}
+
+.product > img:hover {
+  transform: scale(1.08);
+  opacity: 0.8;
 }
 
 .product_info {
@@ -27,6 +34,10 @@
 
 .product_price {
   margin-top: 5px;
+}
+
+.product_ratings {
+  display: flex;
 }
 
 .product > button {

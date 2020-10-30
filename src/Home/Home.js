@@ -1,5 +1,6 @@
 import React from "react";
 import "./Home.css";
+import Categories from "../Categories/Categories";
 import Product from "../Product/Product";
 
 function Home() {
@@ -12,14 +13,43 @@ function Home() {
           alt=""
         />
         <div className="home_row">
-          <Product />
+          <Categories img="https://images-eu.ssl-images-amazon.com/images/G/31/Gateway/HVE/Jup20/NAVs/DesktopShoveler_1X_WL_ph3._CB418076692_.jpg" />
+          <Categories img="https://images-eu.ssl-images-amazon.com/images/G/31/Gateway/HVE/Jup20/NAVs/DesktopShoveler_1X_CEPC_ph3._CB418076693_.jpg" />
+          <Categories img="https://images-eu.ssl-images-amazon.com/images/G/31/Gateway/HVE/Jup20/NAVs/DesktopShoveler_1X_LATV_ph3._CB418076693_.jpg" />
+          <Categories img="https://images-eu.ssl-images-amazon.com/images/G/31/Gateway/HVE/Jup20/NAVs/DesktopShoveler_1X_SL_ph3._CB418076693_.jpg" />
+          <Categories img="https://images-eu.ssl-images-amazon.com/images/G/31/Gateway/HVE/Jup20/NAVs/DesktopShoveler_1X_MEDIA_ph3._CB418076693_.jpg" />
+          <Categories img="https://images-eu.ssl-images-amazon.com/images/G/31/Gateway/HVE/Jup20/NAVs/DesktopShoveler_1X_CONS_ph3._CB418076693_.jpg" />
+          <Categories img="https://images-eu.ssl-images-amazon.com/images/G/31/Gateway/HVE/Jup20/NAVs/DesktopShoveler_1X_Devices_ph3._CB418076693_.jpg" />
         </div>
         <div className="home_row">
-          {/* product */}
-          {/* product */}
-          {/* product */}
+          <Product
+            title="Decals Design StickersKart Wall Stickers Tree with Birds and Cages (Brown)"
+            img="https://m.media-amazon.com/images/I/512Mez3HNAL.__AC_SY200_.jpg"
+            price={120.49}
+            rating={5}
+          />
+          <Product
+            title="Decals Design StickersKart Wall Stickers Tree with Birds and Cages (Brown)"
+            img="https://m.media-amazon.com/images/I/512Mez3HNAL.__AC_SY200_.jpg"
+            price={94.99}
+            rating={3}
+          />
+          <Product
+            title="Decals Design StickersKart Wall Stickers Tree with Birds and Cages (Brown)"
+            img="https://m.media-amazon.com/images/I/512Mez3HNAL.__AC_SY200_.jpg"
+            price={49.99}
+            rating={2}
+          />
         </div>
-        <div className="home_row">{/* product */}</div>
+        <div className="home_row">
+          <Product
+            id="908246837"
+            title="Samsung LC49HG90DMUXEN 48.9-inch Ultra Wide Curved Monitor (Black)"
+            price={1094.98}
+            rating={4}
+            img="https://m.media-amazon.com/images/I/81vlA84pg6L._AC_UY218_.jpg"
+          />
+        </div>
       </div>
     </div>
   );
