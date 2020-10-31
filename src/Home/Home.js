@@ -23,21 +23,45 @@ function Home() {
         </div>
         <div className="home_row">
           <Product
+            id="901435837"
             title="Decals Design StickersKart Wall Stickers Tree with Birds and Cages (Brown)"
             img="https://m.media-amazon.com/images/I/512Mez3HNAL.__AC_SY200_.jpg"
-            price={120.49}
+            price={1120.49}
             rating={5}
           />
           <Product
+            id="9082463457"
             title="Decals Design StickersKart Wall Stickers Tree with Birds and Cages (Brown)"
             img="https://m.media-amazon.com/images/I/512Mez3HNAL.__AC_SY200_.jpg"
-            price={94.99}
+            price={694.99}
             rating={3}
           />
           <Product
+            id="908246667"
             title="Decals Design StickersKart Wall Stickers Tree with Birds and Cages (Brown)"
             img="https://m.media-amazon.com/images/I/512Mez3HNAL.__AC_SY200_.jpg"
-            price={49.99}
+            price={419.99}
+            rating={2}
+          />
+          <Product
+            id="908246667"
+            title="Decals Design StickersKart Wall Stickers Tree with Birds and Cages (Brown)"
+            img="https://m.media-amazon.com/images/I/512Mez3HNAL.__AC_SY200_.jpg"
+            price={419.99}
+            rating={2}
+          />
+          <Product
+            id="908246667"
+            title="Decals Design StickersKart Wall Stickers Tree with Birds and Cages (Brown)"
+            img="https://m.media-amazon.com/images/I/512Mez3HNAL.__AC_SY200_.jpg"
+            price={419.99}
+            rating={2}
+          />
+          <Product
+            id="908246667"
+            title="Decals Design StickersKart Wall Stickers Tree with Birds and Cages (Brown)"
+            img="https://m.media-amazon.com/images/I/512Mez3HNAL.__AC_SY200_.jpg"
+            price={419.99}
             rating={2}
           />
         </div>
@@ -45,7 +69,7 @@ function Home() {
           <Product
             id="908246837"
             title="Samsung LC49HG90DMUXEN 48.9-inch Ultra Wide Curved Monitor (Black)"
-            price={1094.98}
+            price={109904.98}
             rating={4}
             img="https://m.media-amazon.com/images/I/81vlA84pg6L._AC_UY218_.jpg"
           />
