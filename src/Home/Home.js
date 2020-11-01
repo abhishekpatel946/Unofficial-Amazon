@@ -24,42 +24,42 @@ function Home() {
         <div className="home_row">
           <Product
             id="901435837"
-            title="Decals Design StickersKart Wall Stickers Tree with Birds and Cages (Brown)"
+            title="Decals Design StickersKart Wall Stickers"
             img="https://m.media-amazon.com/images/I/512Mez3HNAL.__AC_SY200_.jpg"
             price={1120.49}
             rating={5}
           />
           <Product
             id="9082463457"
-            title="Decals Design StickersKart Wall Stickers Tree with Birds and Cages (Brown)"
+            title="Decals Design StickersKart Wall Stickers"
             img="https://m.media-amazon.com/images/I/512Mez3HNAL.__AC_SY200_.jpg"
             price={694.99}
             rating={3}
           />
           <Product
             id="908246667"
-            title="Decals Design StickersKart Wall Stickers Tree with Birds and Cages (Brown)"
+            title="Decals Design StickersKart Wall Stickers"
             img="https://m.media-amazon.com/images/I/512Mez3HNAL.__AC_SY200_.jpg"
             price={419.99}
             rating={2}
           />
           <Product
             id="908246667"
-            title="Decals Design StickersKart Wall Stickers Tree with Birds and Cages (Brown)"
+            title="Decals Design StickersKart Wall Stickers"
             img="https://m.media-amazon.com/images/I/512Mez3HNAL.__AC_SY200_.jpg"
             price={419.99}
             rating={2}
           />
           <Product
             id="908246667"
-            title="Decals Design StickersKart Wall Stickers Tree with Birds and Cages (Brown)"
+            title="Decals Design StickersKart Wall Stickers"
             img="https://m.media-amazon.com/images/I/512Mez3HNAL.__AC_SY200_.jpg"
             price={419.99}
             rating={2}
           />
           <Product
             id="908246667"
-            title="Decals Design StickersKart Wall Stickers Tree with Birds and Cages (Brown)"
+            title="Decals Design StickersKart Wall Stickers"
             img="https://m.media-amazon.com/images/I/512Mez3HNAL.__AC_SY200_.jpg"
             price={419.99}
             rating={2}

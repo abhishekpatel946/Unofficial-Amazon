@@ -26,10 +26,12 @@ function Header() {
         <SearchIcon className="header_searchIcon" />
       </div>
       <div className="header_nav">
-        <div className="header_options">
-          <snap className="header_optionsLineOne">Hello, Guest</snap>
-          <snap className="header_optionsLineTwo">SignIn</snap>
-        </div>
+        <Link to="/login">
+          <div className="header_options">
+            <snap className="header_optionsLineOne">Hello, Guest</snap>
+            <snap className="header_optionsLineTwo">SignIn</snap>
+          </div>
+        </Link>
         <div className="header_options">
           <snap className="header_optionsLineOne">Return's</snap>
           <snap className="header_optionsLineTwo">& Orders</snap>
