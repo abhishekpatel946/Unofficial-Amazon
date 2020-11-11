@@ -16,7 +16,9 @@ function Checkout() {
           alt=""
         />
         <div>
-          <h3 style={{ padding: "10px" }}>Hello, {user?.email}</h3>
+          <h3 style={{ padding: "10px" }}>
+            Hello, {user ? user.email : "Guest"}
+          </h3>
           <h2 className="checkout_title">Your Shopping Cart</h2>
           {/* cartItem;s */}
           {cart.map((item) => (
