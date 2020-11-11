@@ -1,0 +1,31 @@
+.headerOpt {
+  width: 100%;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  background-color: #232f3e;
+  position: sticky;
+}
+
+.headerOptions {
+  color: white;
+  display: flex;
+}
+
+.header_locationIcon {
+  margin-right: 4px;
+  margin-left: 10px;
+}
+
+.header_address {
+  margin-right: 30px;
+}
+
+.header_category {
+  margin-left: 20px;
+}
+
+.header_category > span {
+  justify-content: space-between;
+  margin-right: 20px;
+}

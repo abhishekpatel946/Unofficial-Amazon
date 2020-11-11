@@ -2,7 +2,7 @@ import React from "react";
 import "./CheckoutProducts.css";
 import { useStateValue } from "../ContextProvider/StateProvider";
 
-function CheckoutProducts({ id, img, title, rating, price }) {
+function CheckoutProducts({ key, id, img, title, rating, price }) {
   const [{ cart }, dispatch] = useStateValue();
 
   const removeFromCart = () => {

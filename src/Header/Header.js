@@ -36,19 +36,21 @@ function Header() {
       <div className="header_nav">
         <Link to={!user && "/login"}>
           <div className="header_options" onClick={handleAuthentication}>
-            <snap className="header_optionsLineOne">Hello, Guest</snap>
-            <snap className="header_optionsLineTwo">
+            <span className="header_optionsLineOne">
+              Hello, {user ? user.email : "Guest"}
+            </span>
+            <span className="header_optionsLineTwo">
               {user ? "Sign Out" : "Sign In"}
-            </snap>
+            </span>
           </div>
         </Link>
         <div className="header_options">
-          <snap className="header_optionsLineOne">Return's</snap>
-          <snap className="header_optionsLineTwo">& Orders</snap>
+          <span className="header_optionsLineOne">Return's</span>
+          <span className="header_optionsLineTwo">& Orders</span>
         </div>
         <div className="header_options">
-          <snap className="header_optionsLineOne">Your</snap>
-          <snap className="header_optionsLineTwo">Prime</snap>
+          <span className="header_optionsLineOne">Your</span>
+          <span className="header_optionsLineTwo">Prime</span>
         </div>
         <Link to="/checkout">
           <div className="header_optionCart">
