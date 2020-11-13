@@ -10,6 +10,13 @@ import { useStateValue } from "./ContextProvider/StateProvider";
 import Payment from "./Payments/Payment";
 import HeaderOpt from "./Header/HeaderOpt";
 import Footer from "./Footer/Footer";
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+
+// public stripe key
+const promise = loadStripe(
+  "pk_live_51HYm1GKmCNse0NhO4bcncB5mTLhv3hGbJTfqstWkkXTExCqES8DeAnSdsveQlL2hbAk1zuzSINiM7IvrJamGGv1Z00WCMGK5Q2"
+);
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
@@ -41,12 +48,15 @@ function App() {
           </Route>
           <Route path="/checkout">
             <Header />
+            <HeaderOpt />
             <Checkout />
             <Footer />
           </Route>
           <Route path="/payment">
             <Header />
-            <Payment />
+            <Elements stripe={promise}>
+              <Payment />
+            </Elements>
             <Footer />
           </Route>
           <Route path="/">
