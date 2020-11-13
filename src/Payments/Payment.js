@@ -51,7 +51,7 @@ function Payment() {
         setError(null);
         setProcessing(false);
 
-        // back to orders page
+        // back to orders page (swap with order bcoz we didn't come back on payment page)
         history.replaceState("/orders");
       });
   };
