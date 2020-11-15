@@ -44,15 +44,17 @@ function Header() {
             </span>
           </div>
         </Link>
-        <div className="header_options">
-          <span className="header_optionsLineOne">Return's</span>
-          <span className="header_optionsLineTwo">& Orders</span>
-        </div>
+        <Link to={(user && "/orders") || (!user && "/login")}>
+          <div className="header_options">
+            <span className="header_optionsLineOne">Return's</span>
+            <span className="header_optionsLineTwo">& Orders</span>
+          </div>
+        </Link>
         <div className="header_options">
           <span className="header_optionsLineOne">Your</span>
           <span className="header_optionsLineTwo">Prime</span>
         </div>
-        <Link to="/checkout">
+        <Link to={(user && "/checkout") || (!user && "/login")}>
           <div className="header_optionCart">
             <ShppingCartIcon />
             <span className="header_optionCart_cartCount">{cart?.length}</span>
