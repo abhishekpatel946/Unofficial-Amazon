@@ -12,6 +12,7 @@ import HeaderOpt from "./Header/HeaderOpt";
 import Footer from "./Footer/Footer";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
+import Orders from "./Orders/Orders";
 
 // public stripe key
 const promise = loadStripe(
@@ -57,6 +58,12 @@ function App() {
             <Elements stripe={promise}>
               <Payment />
             </Elements>
+            <Footer />
+          </Route>
+          <Route path="/orders">
+            <Header />
+            <HeaderOpt />
+            <Orders />
             <Footer />
           </Route>
           <Route path="/">

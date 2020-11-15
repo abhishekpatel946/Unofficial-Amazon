@@ -6,33 +6,37 @@ import CurrencyFormat from "react-currency-format";
 import { getCartTotal } from "../ContextProvider/Reducer";
 import { useStateValue } from "../ContextProvider/StateProvider";
 import { useElements, useStripe, CardElement } from "@stripe/react-stripe-js";
-import Axios from "axios";
+import axios from "axios";
+import { db } from "../Firebase/firebase";
 
 function Payment() {
-  const [{ cart, user }] = useStateValue();
+  const [{ cart, user }, dispatch] = useStateValue();
   const history = useHistory();
 
   const stripe = useStripe();
   const elements = useElements();
 
   const [succeeded, setSucceeded] = useState(false);
-  const [processing, setProcessing] = useState(false);
-  const [disabled, setDisabled] = useState(true);
+  const [processing, setProcessing] = useState("");
   const [error, setError] = useState(null);
+  const [disabled, setDisabled] = useState(true);
   const [clientSecret, setClientSecret] = useState(true);
 
   useEffect(() => {
     // generate the special stripe secret which allows us to charge a customer
     const getClientSecret = async () => {
-      const response = await Axios({
-        method: "post",
-        // stripe expects the totalin a currencies subunits
-        url: `/payment/create?total=${getCartTotal(cart) * 100}`,
+      const response = await axios({
+        method: "POST",
+        // stripe expects the total in a currencies sub-units
+        url: `/payments/create?total=${getCartTotal(cart) * 100}`,
       });
       setClientSecret(response.data.clientSecret);
     };
     getClientSecret();
   }, [cart]);
+
+  // TODO: error is here... client_secret is not responsed back?
+  console.log("The secret is ==> ", clientSecret);
 
   const handleSubmit = async (event) => {
     // do all the fancy stripe...
@@ -47,12 +51,27 @@ function Payment() {
       })
       .then(({ paymentIntent }) => {
         // paymentIntent = payment confirmation
+
+        db.collection("users")
+          .doc(user?.uid)
+          .collection("orders")
+          .doc(paymentIntent.id)
+          .set({
+            cart: cart,
+            amount: paymentIntent.amount,
+            created: paymentIntent.created,
+          });
+
         setSucceeded(true);
         setError(null);
         setProcessing(false);
 
+        dispatch({
+          type: "EMPTY_CART",
+        });
+
         // back to orders page (swap with order bcoz we didn't come back on payment page)
-        history.replaceState("/orders");
+        history.replace("/orders");
       });
   };
 
